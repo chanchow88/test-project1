@@ -3,9 +3,14 @@ import { SystemMessages } from '../constants/SystemMessages';
 import LoginPage from '../pages/Login.page';
 import login from '../../data/Login.json';
 
-describe('Authentication page.0', () => {
+describe('Authentication page.1', () => {
     before(() => {
         LoginPage.open();
+    });
+
+    beforeEach(() => {
+      browser.refresh();
+      browser.pause(3000);
     });
 
     it('Displays login message successfully.', () => {
